@@ -1,6 +1,7 @@
 #include<stdio.h>
-void trungbinh(){
-    //#BÀI 1: TÍNH TRUNG BÌNH TỔNG CỦA CÁC SỐ TỰ NHIÊN CHIA HẾT CHO 2
+
+//#BÀI 1: TÍNH TRUNG BÌNH TỔNG CỦA CÁC SỐ TỰ NHIÊN CHIA HẾT CHO 2
+void Chucnang1(){
     int min,max;
     printf("Nhap min:");
     scanf("%d",&min);
@@ -21,8 +22,9 @@ void trungbinh(){
         printf("Trung binh tong cua cac so tu nhien chia het cho 2 tu %d den %d la: %d",min,max,trungbinh);
     }
 }
-void nguyento(){
-    //#Bài 2: XÁC ĐỊNH SỐ NGUYÊN TỐ
+
+//#Bài 2: XÁC ĐỊNH SỐ NGUYÊN TỐ
+void Chucnang2(){
     int x,i,count=0;
     printf("Nhap so x:");
     scanf("%d",&x);
@@ -33,30 +35,31 @@ void nguyento(){
         }
     }
     if(count ==0){
-        printf("x la so nguyen to");
+        printf("%d la so nguyen to",x);
     }else{
-        printf("x khong phai so nguyen to");
+        printf("%d khong phai so nguyen to",x);
     }
-} 
-void chinhphuong(){
-    //#Bài 3: XÁC ĐỊNH SỐ CHÍNH PHƯƠNG
+}
+
+//#Bài 3: XÁC ĐỊNH SỐ CHÍNH PHƯƠNG
+void Chucnang3(){
     int x1,i1,count1=0;
     printf("Nhap so x:");
     scanf("%d",&x1);
     //Chuong trinh so chinh phuong 
     for(i1=1;i1<=x1;i1++){
         if(i1*i1 ==x1){
-            printf("x la so chinh phuong");
+            printf("%d la so chinh phuong",x1);
             break;
         }else{
-            printf("x khong phai so chinh phuong");
+            printf("%d khong phai so chinh phuong",x1);
             break;
         }
     }
 }
 
+//XÂY DỰNG MENU CHƢƠNG TRÌNH CHO 3 BÀI TẬP TRÊN
 int main(){
-    //XÂY DỰNG MENU CHƢƠNG TRÌNH CHO 3 BÀI TẬP TRÊN
     int choice;
     do{
         printf("\nMenu chon chuc nang");
@@ -68,19 +71,19 @@ int main(){
         scanf("%d",&choice);
         switch(choice){
             case 1:
-            trungbinh();
-            break;
+                Chucnang1();
+                break;
             case 2:
-            nguyento();
-            break;
+                Chucnang2();
+                break;
             case 3:
-            chinhphuong();
-            break;
+                Chucnang3();
+                break;
             case 4:
-            printf("Hen gap lai");
-            break;
+                printf("Hen gap lai");
+                break;
             default:
-            printf("Chuc nang ban chon khong co, ban vui long chon lai chuc nang");
+                printf("Chuc nang ban chon khong co, ban vui long chon lai chuc nang");
         }
     }while(choice!=4);
     return 0;
